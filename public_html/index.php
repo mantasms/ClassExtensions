@@ -1,6 +1,6 @@
 <?php
 
-Class Girl {
+class Girl {
 
     public function beSmart() {
         return 'Im smart';
