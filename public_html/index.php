@@ -2,9 +2,9 @@
 
 class Girl {
 
-    private $age;
+    protected $age;
 
-    public function __construct() {
+    public function __construct($age) {
         $this->age = $age;
     }
 
