@@ -19,3 +19,11 @@ class Girlfriend extends Girl {
     }
 
 }
+
+class Wife extends Girlfriend {
+
+    public function pistiProta() {
+        return 'Eik nx';
+    }
+
+}
