@@ -67,7 +67,7 @@ class Boyfriend extends Boy {
 class Husband extends Boyfriend {
 
     public function winArgument() {
-        $rand = rand(1, 1000000);
+        $rand = rand(0, 1000000);
 
         if ($rand == 1000000) {
             return parent::winArgument();
