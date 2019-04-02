@@ -42,6 +42,15 @@ class HorribleWife extends Girlfriend {
 
 }
 
-$girl = new HorribleWife;
+class Boy {
+
+    public function winArgument() {
+        return 'You won. Congrats';
+    }
+
+}
+
+$girl = new HorribleWife(30);
 print $girl->pistiProta();
+var_dump($girl);
 ?>
