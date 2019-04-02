@@ -69,7 +69,7 @@ class Husband extends Boyfriend {
     public function winArgument() {
         $rand = rand(0, 1000000);
 
-        if ($rand) {
+        if ($rand==1000000) {
             return 'No way!';
         } else {
             return parent::winArgument();
