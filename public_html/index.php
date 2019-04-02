@@ -50,6 +50,17 @@ class Boy {
 
 }
 
+class Boyfriend extends Boy {
+
+    public function winArgument() {
+        $rand = rand(0, 1);
+        if ($rand) {
+            return 'Not this time!'
+        }
+    }
+
+}
+
 $girl = new HorribleWife(30);
 print $girl->pistiProta();
 var_dump($girl);
