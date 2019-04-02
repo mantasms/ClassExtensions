@@ -7,7 +7,15 @@ class Girl {
     }
 
     public function beBeautiful() {
-        return 'Im beutiful';
+        return 'Im beautiful';
+    }
+
+}
+
+class Girlfriend extends Girl {
+
+    public function pistiProta() {
+        return 'ka ten palaikinai FB?';
     }
 
 }
