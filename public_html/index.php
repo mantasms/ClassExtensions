@@ -2,6 +2,12 @@
 
 class Girl {
 
+    private $age;
+
+    public function __construct() {
+        $this->age = $age;
+    }
+
     public function beSmart() {
         return 'Im smart';
     }
@@ -23,7 +29,19 @@ class Girlfriend extends Girl {
 class Wife extends Girlfriend {
 
     public function pistiProta() {
-        return 'Eik nx';
+        return 'Miegosi balkone!';
     }
 
 }
+
+class HorribleWife extends Girlfriend {
+
+    public function pistiProta() {
+        return parent::pistiProta() . ' Surasi mane pas Petra!';
+    }
+
+}
+
+$girl = new HorribleWife;
+print $girl->pistiProta();
+?>
