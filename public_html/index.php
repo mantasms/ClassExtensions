@@ -64,6 +64,20 @@ class Boyfriend extends Boy {
 
 }
 
+class Husband extends Boyfriend {
+
+    public function winArgument() {
+        $rand = rand(0, 1000000);
+
+        if ($rand) {
+            return 'No way!';
+        } else {
+            return parent::winArgument();
+        }
+    }
+
+}
+
 $girl = new HorribleWife(30);
 print $girl->pistiProta();
 var_dump($girl);
