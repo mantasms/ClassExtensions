@@ -2,10 +2,10 @@
 
 namespace App;
 
-class SensorFartTemp extends Abstracts\Sensor {
+class SensorFartHumidity extends Abstracts\Sensor {
 
     public function read() {
-        return rand(365, 425) / 10;
+        return rand(0, 100) . ' %';
     }
 
 }
