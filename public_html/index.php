@@ -1,86 +1,26 @@
 <?php
+require '../bootloader.php';
 
-class Girl {
+$sensors = new App\Sensors();
+$sensor_fart_temp = new App\SensorFartTemp();
+$sensor_fart_humidity = new App\SensorFartHumidity();
 
-    protected $age;
-
-    public function __construct($age) {
-        $this->age = $age;
-    }
-
-    public function beSmart() {
-        return 'Im smart';
-    }
-
-    public function beBeautiful() {
-        return 'Im beautiful';
-    }
-
-}
-
-class Girlfriend extends Girl {
-
-    public function pistiProta() {
-        return 'ka ten palaikinai FB?';
-    }
-
-}
-
-class Wife extends Girlfriend {
-
-    public function pistiProta() {
-        return 'Miegosi balkone!';
-    }
-
-}
-
-class HorribleWife extends Girlfriend {
-
-    public function pistiProta() {
-        return parent::pistiProta() . ' Surasi mane pas Petra!';
-    }
-
-}
-
-class Boy {
-
-    public function winArgument() {
-        return 'You won. Congrats';
-    }
-
-}
-
-class Boyfriend extends Boy {
-
-    public function winArgument() {
-        $rand = rand(0, 1);
-
-        if ($rand) {
-            return 'Not this time!';
-        } else {
-            return parent::winArgument();
-        }
-    }
-
-}
-
-class Husband extends Boyfriend {
-
-    public function winArgument() {
-        $rand = rand(0, 1000000);
-
-        if ($rand == 1000000) {
-            return parent::winArgument();
-        } else {
-            return 'No way!';
-        }
-    }
-
-}
-
-$girl = new HorribleWife(30);
-print $girl->pistiProta();
-var_dump($girl);
-$boy = new Boyfriend();
-print $boy->winArgument();
+$sensors->add('temp', $sensor_fart_temp);
+$sensors->add('humidity', $sensor_fart_humidity);
 ?>
+<html>
+    <head>
+        <title>Sensors</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <h1>Sensors</h1>
+        <div class="container">
+            <div class="flex-container">
+                <?php foreach ($model_user->loadAll() as $user): ?>
+                    <h4><?php print $user->getUsername(); ?></h4>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </body>
+</html>
