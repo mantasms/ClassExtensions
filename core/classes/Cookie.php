@@ -2,7 +2,7 @@
 
 namespace Core\Classes;
 
-abstract class Cookie {
+class extends Cookie {
 
     protected $name;
 
