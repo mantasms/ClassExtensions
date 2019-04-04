@@ -1,10 +1,27 @@
 <?php
 
-namespace Core\Classes;
+namespace Core;
 
-class extends Cookie {
+class Cookie extends \Core\Abstracts\Cookie {
+    
+    public function __construct(string $name) {
+        $this->name = $name;
+    }
 
-    protected $name;
+    public function delete(): void {
+        
+    }
 
-    abstract public function __construct(string $name): void;
+    public function exists(): bool {
+        
+    }
+
+    public function read(): array {
+        
+    }
+
+    public function save($data, $expires_in = 3600): void {
+        
+    }
+
 }

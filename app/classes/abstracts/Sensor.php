@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes\Abstracts;
+namespace App\Abstracts;
 
 abstract class Sensor {
 
